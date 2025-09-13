@@ -1,15 +1,16 @@
 {
   "globals": {
-    "DefaultLayout": true,
     "Env": true,
     "Head": true,
     "HttpServer": true,
     "Link": true,
     "createRef": true,
+    "defaultLayout": true,
     "forwardRef": true,
     "http": true,
     "lazy": true,
     "memo": true,
+    "metadata": true,
     "startTransition": true,
     "useCallback": true,
     "useContext": true,
