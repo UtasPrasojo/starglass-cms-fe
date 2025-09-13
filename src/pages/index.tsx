@@ -27,6 +27,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+         <div className="p-6 mb-12 bg-blue-500 text-white rounded-lg">
+    Tailwind CSS is working! 🎉
+  </div>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
@@ -78,7 +81,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
+            <h2 className={inter.className} >
               Docs <span>-&gt;</span>
             </h2>
             <p className={inter.className}>

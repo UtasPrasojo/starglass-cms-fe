@@ -1,9 +1,11 @@
 {
   "globals": {
+    "Button": true,
     "Env": true,
     "Head": true,
     "HttpServer": true,
     "Link": true,
+    "buttonVariants": true,
     "createRef": true,
     "defaultLayout": true,
     "forwardRef": true,
