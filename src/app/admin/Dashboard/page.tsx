@@ -19,16 +19,16 @@ import { Info } from "lucide-react";
 export default function DashboardPage() {
   // Data untuk Pie Chart
   const pieData = [
-    { name: "Tractores", value: 3000, color: "#00BCD4" },
+    { name: "Traktor", value: 3000, color: "#00BCD4" },
     { name: "Sedan", value: 1500, color: "#E91E63" },
-    { name: "Autobus", value: 800, color: "#9C27B0" },
+    { name: "Bus", value: 800, color: "#9C27B0" },
   ];
 
   // Data untuk Bar Chart
   const barData = [
-    { name: "Mayo", Entrada: 12000, Salida: 15000 },
-    { name: "Junio", Entrada: 18000, Salida: 10000 },
-    { name: "Julio", Entrada: 5000, Salida: 22000 },
+    { name: "Mei", Masuk: 12000, Keluar: 15000 },
+    { name: "Juni", Masuk: 18000, Keluar: 10000 },
+    { name: "Juli", Masuk: 5000, Keluar: 22000 },
   ];
 
   return (
@@ -37,31 +37,31 @@ export default function DashboardPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card className="flex flex-col justify-between">
           <CardHeader>
-            <CardTitle>Agregar</CardTitle>
+            <CardTitle>Tambah</CardTitle>
           </CardHeader>
           <CardContent>
             <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white">
-              Ir
+              Pergi
             </Button>
           </CardContent>
         </Card>
         <Card className="flex flex-col justify-between">
           <CardHeader>
-            <CardTitle>Actualizar</CardTitle>
+            <CardTitle>Perbarui</CardTitle>
           </CardHeader>
           <CardContent>
             <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white">
-              Ir
+              Pergi
             </Button>
           </CardContent>
         </Card>
         <Card className="flex flex-col justify-between">
           <CardHeader>
-            <CardTitle>Eliminar</CardTitle>
+            <CardTitle>Hapus</CardTitle>
           </CardHeader>
           <CardContent>
             <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white">
-              Ir
+              Pergi
             </Button>
           </CardContent>
         </Card>
@@ -69,15 +69,15 @@ export default function DashboardPage() {
 
       {/* Bagian Chart */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Total Vehiculos */}
+        {/* Total Kendaraan */}
         <Card>
           <CardHeader className="flex items-center justify-between">
-            <CardTitle>Vehiculos año 2024</CardTitle>
+            <CardTitle>Kendaraan Tahun 2024</CardTitle>
             <Info className="h-5 w-5 text-gray-400" />
           </CardHeader>
           <CardContent>
             <p className="text-4xl font-bold">5.987,34</p>
-            <p className="text-sm text-muted-foreground mb-4">Secondary text</p>
+            <p className="text-sm text-muted-foreground mb-4">Teks tambahan</p>
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
                 <Pie
@@ -99,10 +99,10 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        {/* Reportes Trimestral */}
+        {/* Laporan Triwulan */}
         <Card>
           <CardHeader>
-            <CardTitle>Reportes Trimestral</CardTitle>
+            <CardTitle>Laporan Triwulan</CardTitle>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={250}>
@@ -111,8 +111,8 @@ export default function DashboardPage() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="Entrada" fill="#2196F3" />
-                <Bar dataKey="Salida" fill="#4CAF50" />
+                <Bar dataKey="Masuk" fill="#2196F3" />
+                <Bar dataKey="Keluar" fill="#4CAF50" />
               </BarChart>
             </ResponsiveContainer>
           </CardContent>
