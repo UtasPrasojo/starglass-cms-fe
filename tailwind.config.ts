@@ -1,11 +1,11 @@
-/** @type {import('tailwindcss').Config} */
-const animate = require('tailwindcss-animate');
+import animate from 'tailwindcss-animate'
+import type { Config } from 'tailwindcss'
 
-module.exports = {
+export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -22,4 +22,4 @@ module.exports = {
   },
   plugins: [animate],
   darkMode: 'class',
-};
+} satisfies Config
