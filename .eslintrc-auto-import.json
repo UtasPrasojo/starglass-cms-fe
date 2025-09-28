@@ -1,5 +1,8 @@
 {
   "globals": {
+    "Avatar": true,
+    "AvatarFallback": true,
+    "AvatarImage": true,
     "Button": true,
     "Card": true,
     "CardContent": true,
