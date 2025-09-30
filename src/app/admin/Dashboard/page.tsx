@@ -5,71 +5,120 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Home() {
+   const dataLatest = [
+    {
+      image: "/article1.jpg",
+      title: "Starglas Netral Cup",
+      desc: "Pelajari bagaimana cara memilih cup plastik yang aman, higienis, dan cocok untuk bisnis minuman Anda.",
+    },
+    {
+      image: "/article2.jpg",
+      title: "Starglas Oval (U) Cup",
+      desc: "Cup PP premium lebih tahan panas, tidak mudah bocor, dan bebas dari bahan berbahaya.",
+    },
+    {
+      image: "/article3.jpg",
+      title: "Starglas Slim Cup",
+      desc: "Cup ramah lingkungan membantu bisnis Anda lebih sustainable dan disukai konsumen modern.",
+    },
+  ];
+  const dataAbout = [
+      {
+        image: "/about1.png",
+        title: "Diproses menggunakan teknologi eropa",
+        desc: "Diproses dengan teknologi Eropa, hasil lebih presisi dan berkualitas tinggi.",
+      },
+      {
+        image: "/about2.jpeg",
+        title: "Quality kontrol ketat",
+        desc: "Melalui quality control ketat, setiap cup terjamin aman dan berkualitas premium.",
+      },
+      {
+        image: "/about3.png",
+        title: "Bahan murni tanpa daur ulang",
+        desc: "Dibuat dari bahan murni tanpa daur ulang, aman dan higienis untuk setiap minuman.",
+      },
+    ];
   return (
     <main className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-white">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 py-16">
-          <div>
-            <h1 className="text-4xl font-bold mb-4">
-              Supplier Cup PP Berkualitas
-            </h1>
-            <p className="mb-6 text-gray-600">
-              Kualitas Premium bebas dari bahan daur ulang
-              <br />
-              Cocok untuk segala Minuman
-            </p>
-            <Button
-  size="lg"
-  className="bg-[#2D6B49] hover:bg-[#24553A] text-white border-none outline-none focus:outline-none focus:ring-0"
->
-  Consult today
-</Button>
+    <section className="bg-white">
+  <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 py-16">
+    <div>
+      {/* Logo di atas judul */}
+      <div className="mb-4">
+        <Image
+          src="/pp-icon.webp" // ganti dengan file logo kamu
+          alt="Logo Starglas"
+          width={120}
+          height={120}
+          className="mx-auto md:mx-0"
+        />
+      </div>
 
-          </div>
-          <div className="relative w-full h-120">
-            <Image
-              src="/hero.png" // ganti dengan image hero kamu
-              alt="Hero Image"
-              fill
-              className="object-cover rounded-xl"
-            />
-          </div>
-        </div>
-      </section>
+      <h1 className="text-4xl font-bold mb-4">
+        Supplier Cup PP Berkualitas
+      </h1>
+      <p className="mb-6 text-gray-600">
+        Kualitas Premium bebas dari bahan daur ulang
+        <br />
+        Cocok untuk segala Minuman
+      </p>
 
-      {/* Services Section */}
+      <a
+        href="https://api.whatsapp.com/send/?phone=6282258883089&text&type=phone_number&app_absent=0"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button
+          size="lg"
+          className="bg-[#2D6B49] hover:bg-[#24553A] text-white border-none outline-none focus:outline-none focus:ring-0"
+        >
+          Consult today
+        </Button>
+      </a>
+    </div>
+
+    <div className="relative w-full h-120">
+      <Image
+        src="/hero.png" // ganti dengan image hero kamu
+        alt="Hero Image"
+        fill
+        className="object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</section>
+
+
+      {/* About Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold">Our Services</h2>
+          <h2 className="text-3xl font-bold">About Us</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Mengapa harus memilih Starglas.id sebagai supplier cup plastik
           </p>
         </div>
        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-  {[...Array(3)].map((_, i) => (
-    <Card
-      key={i}
-      className="p-6 border-none outline-none shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl"
-    >
-      <CardContent className="flex flex-col items-center text-center">
-        <Image
-          src="/pp-icon.webp"
-          alt="Service Icon"
-          width={64}
-          height={64}
-          className="mb-4"
-        />
-        <h3 className="text-lg font-semibold">Lorem Ipsum</h3>
-        <p className="text-gray-600 text-sm mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </CardContent>
-    </Card>
-  ))}
-</div>
+        {dataAbout.map((item, i) => (
+          <Card
+            key={i}
+            className="p-6 border-none outline-none shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl"
+          >
+            <CardContent className="flex flex-col items-center text-center">
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={64}
+                height={64}
+                className="mb-4"
+              />
+              <h3 className="text-lg font-semibold">{item.title}</h3>
+              <p className="text-gray-600 text-sm mt-2">{item.desc}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
 
         <div className="text-center mt-10">
           <Button variant="outline">Learn more</Button>
@@ -100,47 +149,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest Article Section */}
+     {/* Latest Article Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold">Check out our latest article</h2>
         </div>
+
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-  {[...Array(3)].map((_, i) => (
-    <Card
-      key={i}
-      className="
-        overflow-hidden 
-        border-none 
-        outline-none 
-        focus:outline-none 
-        focus:ring-0 
-        shadow-lg 
-        hover:shadow-xl 
-        rounded-xl
-        transition-shadow duration-300
-      "
-    >
-      <Image
-        src="/article.png"
-        alt="Article"
-        width={600}
-        height={300}
-        className="object-cover h-48 w-full"
-      />
-      <CardContent className="p-6 text-left">
-        <h3 className="text-lg font-semibold mb-2">Lorem Ipsum</h3>
-        <p className="text-gray-600 text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <Button variant="link" className="p-0 mt-2">
-          Read more →
-        </Button>
-      </CardContent>
-    </Card>
-  ))}
-</div>
+          {dataLatest.map((item, i) => (
+            <Card
+              key={i}
+              className="
+                overflow-hidden 
+                border-none 
+                outline-none 
+                focus:outline-none 
+                focus:ring-0 
+                shadow-lg 
+                hover:shadow-xl 
+                rounded-xl
+                transition-shadow duration-300
+              "
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={600}
+                height={300}
+                className="object-cover h-48 w-full"
+              />
+              <CardContent className="p-6 text-left">
+                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+                <Button variant="link" className="p-0 mt-2">
+                  Read more →
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
         <div className="text-center mt-10">
           <Button variant="outline">View all</Button>
@@ -153,8 +200,7 @@ export default function Home() {
           <div>
             <h3 className="font-bold text-xl mb-4">Starglas.id</h3>
             <p className="text-sm opacity-80">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Jl. Raya Bulakrejo-Gentan, RT.02/RW.03, Sidorejo, Kec. Bendosari, Kabupaten Sukoharjo, Jawa Tengah
             </p>
           </div>
           <div>
