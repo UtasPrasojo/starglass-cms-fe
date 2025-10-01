@@ -92,38 +92,54 @@ export default function Home() {
 
 
       {/* About Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold">About Us</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-            Mengapa harus memilih Starglas.id sebagai supplier cup plastik
-          </p>
-        </div>
-       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-        {dataAbout.map((item, i) => (
-          <Card
-            key={i}
-            className="p-6 border-none outline-none shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl"
-          >
-            <CardContent className="flex flex-col items-center text-center">
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={64}
-                height={64}
-                className="mb-4"
-              />
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="text-gray-600 text-sm mt-2">{item.desc}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+     <section className="relative bg-gray-50 py-16 overflow-hidden">
+  {/* Background image */}
+  <div className="absolute inset-0">
+    <Image
+      src="/backgroundAbout.jpeg"
+      alt="Background About"
+      fill
+      className="object-cover grayscale opacity-80"
+    />
+  </div>
 
-        <div className="text-center mt-10">
-          <Button variant="outline">Learn more</Button>
-        </div>
-      </section>
+  {/* Overlay warna abu biar tetap ada nuansa bg-gray-50 */}
+  <div className="absolute inset-0 bg-gray-50/50"></div>
+
+  {/* Konten */}
+  <div className="relative  container mx-auto text-center mb-12">
+    <h2 className="text-3xl font-bold">About Us</h2>
+    <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+      Mengapa harus memilih Starglas.id sebagai supplier cup plastik
+    </p>
+  </div>
+
+  <div className="relative container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+    {dataAbout.map((item, i) => (
+      <Card
+        key={i}
+        className="p-6 border-none bg-white outline-none shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl"
+      >
+        <CardContent className="flex flex-col items-center text-center">
+          <Image
+            src={item.image}
+            alt={item.title}
+            width={64}
+            height={64}
+            className="mb-4"
+          />
+          <h3 className="text-lg font-semibold">{item.title}</h3>
+          <p className="text-gray-600 text-sm mt-2">{item.desc}</p>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+
+  <div className="relative text-center mt-10">
+    <Button variant="outline">Learn more</Button>
+  </div>
+</section>
+
 
       {/* Testimonial Section */}
       <section className="bg-green-900 py-16 text-white">
