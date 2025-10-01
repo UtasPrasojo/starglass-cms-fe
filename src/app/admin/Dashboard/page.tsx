@@ -109,7 +109,7 @@ export default function Home() {
   {/* Konten */}
   <div className="relative  container mx-auto text-center mb-12">
     <h2 className="text-3xl font-bold">About Us</h2>
-    <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+    <p className=" max-w-2xl mx-auto mt-4">
       Mengapa harus memilih Starglas.id sebagai supplier cup plastik
     </p>
   </div>
