@@ -150,14 +150,14 @@ export default function Home() {
           <div className="max-w-3xl mx-auto bg-green-800 p-8 rounded-xl">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <Avatar className="w-16 h-16">
-                <AvatarImage src="/avatar.png" alt="Customer" />
+                <AvatarImage src="/avatar1.png" alt="Customer" />
                 <AvatarFallback>EN</AvatarFallback>
               </Avatar>
               <div className="text-left">
-                <h3 className="text-lg font-semibold">Edward Newgate</h3>
-                <p className="text-sm opacity-80">Founder Circle</p>
+                <h3 className="text-lg font-semibold">Rafi Ahmad</h3>
+                <p className="text-sm opacity-80">Publik Figure</p>
                 <p className="mt-4">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  "Starglass sangat bisa mencangkup kebutuhan UMKM yang ada di Indonesia. Dengan harga yang terjangkau dan kualitas yang sangat baik."
                 </p>
               </div>
             </div>
