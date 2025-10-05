@@ -150,7 +150,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto bg-green-800 p-8 rounded-xl">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <Avatar className="w-16 h-16">
-                <AvatarImage src="/avatar1.png" alt="Customer" />
+                <AvatarImage src="/avatar1.jpg" alt="Customer" />
                 <AvatarFallback>EN</AvatarFallback>
               </Avatar>
               <div className="text-left">
