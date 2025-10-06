@@ -217,11 +217,14 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-green-900 text-white py-12">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="font-bold text-xl mb-4">Starglas.id</h3>
-            <p className="text-sm opacity-80">
+            <p className="text-sm opacity-80 mb-2">
               Jl. Raya Bulakrejo-Gentan, RT.02/RW.03, Sidorejo, Kec. Bendosari, Kabupaten Sukoharjo, Jawa Tengah
+            </p>
+             <p className="text-xs opacity-70">
+              ©Starglas 2025. All rights reserved
             </p>
           </div>
           <div>
@@ -238,11 +241,7 @@ export default function Home() {
               <li>Instructions</li>
             </ul>
           </div>
-          <div className="flex items-end">
-            <p className="text-xs opacity-70">
-              ©Starglas 2025. All rights reserved
-            </p>
-          </div>
+         
         </div>
       </footer>
     </main>
