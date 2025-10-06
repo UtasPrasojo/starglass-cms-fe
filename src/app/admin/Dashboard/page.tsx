@@ -3,8 +3,11 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { MarqueeTop } from "@/components/marquee-top";
+import WavyText from "@/components/WavyText";
 
 export default function Home() {
+  
    const dataLatest = [
     {
       image: "/article1.jpg",
@@ -40,11 +43,14 @@ export default function Home() {
       },
     ];
   return (
+    
     <main className="flex flex-col">
       {/* Hero Section */}
+        <MarqueeTop />
     <section className="bg-white">
-  <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 py-16">
+  <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 py-4">
     <div>
+    
       {/* Logo di atas judul */}
       <div className="mb-4">
         <Image
@@ -79,14 +85,15 @@ export default function Home() {
       </a>
     </div>
 
-    <div className="relative w-full h-120">
-      <Image
-        src="/hero.png" // ganti dengan image hero kamu
-        alt="Hero Image"
-        fill
-        className="object-cover rounded-xl"
-      />
-    </div>
+  <div className="relative w-full h-120 overflow-hidden rounded-xl group">
+  <Image
+    src="/hero.png"
+    alt="Hero Image"
+    fill
+    className="object-cover rounded-xl transform transition-transform duration-500 group-hover:scale-110"
+  />
+</div>
+
   </div>
 </section>
 
@@ -144,9 +151,7 @@ export default function Home() {
       {/* Testimonial Section */}
       <section className="bg-green-900 py-16 text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12">
-            What our customer are saying
-          </h2>
+         <WavyText text="What our customer are saying" />
           <div className="max-w-3xl mx-auto bg-green-800 p-8 rounded-xl">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <Avatar className="w-16 h-16">

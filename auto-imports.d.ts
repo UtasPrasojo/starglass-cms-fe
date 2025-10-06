@@ -20,6 +20,7 @@ declare global {
   const Input: typeof import('./src/components/ui/input')['Input']
   const Label: typeof import('./src/components/ui/label')['Label']
   const Link: typeof import('next/link')['default']
+  const MarqueeTop: typeof import('./src/components/marquee-top')['MarqueeTop']
   const Select: typeof import('./src/components/ui/select')['Select']
   const SelectContent: typeof import('./src/components/ui/select')['SelectContent']
   const SelectGroup: typeof import('./src/components/ui/select')['SelectGroup']
@@ -58,4 +59,5 @@ declare global {
   const useState: typeof import('react')['useState']
   const useSyncExternalStore: typeof import('react')['useSyncExternalStore']
   const useTransition: typeof import('react')['useTransition']
+  const wavyText: typeof import('./src/components/WavyText')['default']
 }

@@ -16,6 +16,7 @@
     "Input": true,
     "Label": true,
     "Link": true,
+    "MarqueeTop": true,
     "Select": true,
     "SelectContent": true,
     "SelectGroup": true,
@@ -53,6 +54,7 @@
     "useSWR": true,
     "useState": true,
     "useSyncExternalStore": true,
-    "useTransition": true
+    "useTransition": true,
+    "wavyText": true
   }
 }
